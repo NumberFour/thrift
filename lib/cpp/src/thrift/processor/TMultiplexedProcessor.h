@@ -115,6 +115,11 @@ namespace apache
                 services[serviceName] = processor;
             }
 
+            void unregisterProcessor( const std::string & serviceName )
+            {
+                services.erase(serviceName);
+            }
+            
             /**
              * This implementation of <code>process</code> performs the following steps:
              *

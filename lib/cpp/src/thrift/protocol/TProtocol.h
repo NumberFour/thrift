@@ -129,8 +129,10 @@ static inline To bitwise_cast(From from) {
 #  define ntohll(n) ( _byteswap_uint64((uint64_t)n) )
 #  define htonll(n) ( _byteswap_uint64((uint64_t)n) )
 # else /* Not GNUC/GLIBC or MSVC */
-#  define ntohll(n) ( (((uint64_t)ntohl((uint32_t)n)) << 32) + ntohl((uint32_t)(n >> 32)) )
-#  define htonll(n) ( (((uint64_t)htonl((uint32_t)n)) << 32) + htonl((uint32_t)(n >> 32)) )
+#  ifndef ntohll
+#   define ntohll(n) ( (((uint64_t)ntohl((uint32_t)n)) << 32) + ntohl((uint32_t)(n >> 32)) )
+#   define htonll(n) ( (((uint64_t)htonl((uint32_t)n)) << 32) + htonl((uint32_t)(n >> 32)) )
+#  endif
 # endif /* GNUC/GLIBC or MSVC or something else */
 #else /* __THRIFT_BYTE_ORDER */
 # error "Can't define htonll or ntohll!"

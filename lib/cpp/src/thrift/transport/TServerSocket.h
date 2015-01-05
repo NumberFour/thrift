@@ -36,7 +36,8 @@ class TSocket;
  */
 class TServerSocket : public TServerTransport {
  public:
-  typedef apache::thrift::stdcxx::function<void(THRIFT_SOCKET fd)> socket_func_t;
+  // typedef apache::thrift::stdcxx::function<void(THRIFT_SOCKET fd)> socket_func_t;
+  typedef void(*socket_func_t)(THRIFT_SOCKET fd);
 
   const static int DEFAULT_BACKLOG = 1024;
 

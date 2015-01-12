@@ -69,6 +69,7 @@ thrift_SOURCES = src/main.cc \
 # Specific client generator source
 thrift_SOURCES += src/generate/t_c_glib_generator.cc \
                   src/generate/t_cpp_generator.cc \
+                  src/generate/t_cppemb_generator.cc \
                   src/generate/t_java_generator.cc \
                   src/generate/t_json_generator.cc \
                   src/generate/t_as3_generator.cc \

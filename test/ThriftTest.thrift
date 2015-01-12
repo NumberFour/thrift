@@ -172,7 +172,14 @@ service ThriftTest
   double       testDouble(1: double thing),
 
   /**
-   * Prints 'testStruct("{%s}")' where thing has been formatted into a string of comma seperated values
+   * Prints 'testBinary("%s")' where '%s' is a hex-formatted string of thing's data
+   * @param binary  thing - the binary data to print
+   * @return binary  - returns the binary 'thing'
+   */
+  binary       testBinary(1: binary thing),
+  
+  /**
+   * Prints 'testStruct("{%s}")' where thing has been formatted into a string of comma separated values
    * @param Xtruct thing - the Xtruct to print
    * @return Xtruct - returns the Xtruct 'thing'
    */
@@ -187,7 +194,7 @@ service ThriftTest
 
   /**
    * Prints 'testMap("{%s")' where thing has been formatted into a string of  'key => value' pairs
-   *  seperated by commas and new lines
+   *  separated by commas and new lines
    * @param map<i32,i32> thing - the map<i32,i32> to print
    * @return map<i32,i32> - returns the map<i32,i32> 'thing'
    */
@@ -195,7 +202,7 @@ service ThriftTest
 
   /**
    * Prints 'testStringMap("{%s}")' where thing has been formatted into a string of  'key => value' pairs
-   *  seperated by commas and new lines
+   *  separated by commas and new lines
    * @param map<string,string> thing - the map<string,string> to print
    * @return map<string,string> - returns the map<string,string> 'thing'
    */
@@ -203,7 +210,7 @@ service ThriftTest
 
   /**
    * Prints 'testSet("{%s}")' where thing has been formatted into a string of  values
-   *  seperated by commas and new lines
+   *  separated by commas and new lines
    * @param set<i32> thing - the set<i32> to print
    * @return set<i32> - returns the set<i32> 'thing'
    */
@@ -211,7 +218,7 @@ service ThriftTest
 
   /**
    * Prints 'testList("{%s}")' where thing has been formatted into a string of  values
-   *  seperated by commas and new lines
+   *  separated by commas and new lines
    * @param list<i32> thing - the list<i32> to print
    * @return list<i32> - returns the list<i32> 'thing'
    */

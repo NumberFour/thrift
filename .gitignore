@@ -46,6 +46,7 @@ test-driver
 /autoscan.log
 /autoscan-*.log
 /compiler/cpp/Debug
+/compiler/cpp/Release
 /compiler/cpp/libparse.a
 /compiler/cpp/src/thriftl.cc
 /compiler/cpp/src/thrifty.cc
@@ -80,6 +81,7 @@ test-driver
 /lib/cpp/Release/
 /lib/cpp/Release-mt/
 /lib/cpp/src/thrift/qt/moc_TQTcpServer.cpp
+/lib/cpp/src/thrift/qt/moc__TQTcpServer.cpp
 /lib/cpp/src/thrift/config.h
 /lib/cpp/src/thrift/stamp-h2
 /lib/cpp/test/Benchmark
@@ -93,6 +95,7 @@ test-driver
 /lib/cpp/test/RecursiveTest
 /lib/cpp/test/TFDTransportTest
 /lib/cpp/test/TFileTransportTest
+/lib/cpp/test/TNonblockingServerTest
 /lib/cpp/test/TPipedTransportTest
 /lib/cpp/test/TransportTest
 /lib/cpp/test/UnitTests
@@ -152,18 +155,22 @@ test-driver
 /lib/delphi/test/serializer/*.dproj
 /lib/delphi/test/serializer/*.local
 /lib/delphi/test/serializer/*.2007
+/lib/delphi/test/serializer/*.dcu
 /lib/delphi/test/multiplexed/*.dproj
 /lib/delphi/test/multiplexed/*.2007
 /lib/delphi/test/multiplexed/*.local
 /lib/delphi/test/multiplexed/*.identcache
+/lib/delphi/test/multiplexed/*.dcu
 /lib/delphi/test/typeregistry/*.2007
 /lib/delphi/test/typeregistry/*.dproj
 /lib/delphi/test/typeregistry/*.identcache
 /lib/delphi/test/typeregistry/*.local
+/lib/delphi/test/typeregistry/*.dcu
 /lib/erl/.generated
 /lib/erl/.eunit
 /lib/erl/ebin
 /lib/erl/deps/
+/lib/haxe/test/bin
 /lib/hs/dist
 /lib/java/build
 /lib/js/test/build
@@ -205,6 +212,8 @@ test-driver
 /lib/php/test/packages/
 /lib/py/dist/
 /lib/erl/logs/
+/lib/go/test/gopath/
+/lib/go/test/ThriftTest.thrift
 /libtool
 /ltmain.sh
 /missing
@@ -216,8 +225,6 @@ test-driver
 /test/cpp/StressTestNonBlocking
 /test/cpp/TestClient
 /test/cpp/TestServer
-/lib/go/test/gopath/
-/lib/go/test/ThriftTest.thrift
 /test/log/
 /test/test.log
 /test/erl/.eunit/
@@ -229,6 +236,7 @@ test-driver
 /test/go/src/code.google.com/
 /test/go/src/gen/
 /test/go/src/thrift
+/test/haxe/bin
 /test/hs/TestClient
 /test/hs/TestServer
 /test/py.twisted/_trial_temp/
@@ -239,6 +247,7 @@ test-driver
 /tutorial/c_glib/tutorial_server
 /tutorial/delphi/*.dsk
 /tutorial/delphi/*.local
+/tutorial/delphi/*.tvsconfig
 /tutorial/delphi/DelphiClient/dcu
 /tutorial/delphi/DelphiServer/dcu
 /tutorial/delphi/DelphiClient/*.local
@@ -250,8 +259,10 @@ test-driver
 /tutorial/go/src/shared
 /tutorial/go/src/tutorial
 /tutorial/go/src/git.apache.org
+/tutorial/haxe/bin
 /tutorial/hs/dist/
 /tutorial/java/build/
 /tutorial/js/build/
 /ylwrap
 
+/cmake_*

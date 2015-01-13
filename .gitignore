@@ -1,3 +1,6 @@
+# N4 patch file
+patchthrift_done
+
 # generic ignores
 *.la
 *.lo

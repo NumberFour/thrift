@@ -89,7 +89,9 @@ TServerSocket::TServerSocket(int port)
     tcpRecvBuffer_(0),
     keepAlive_(false),
     intSock1_(THRIFT_INVALID_SOCKET),
-    intSock2_(THRIFT_INVALID_SOCKET) {
+    intSock2_(THRIFT_INVALID_SOCKET),
+    listenCallback_(NULL),
+    acceptCallback_(NULL) {
 }
 
 TServerSocket::TServerSocket(int port, int sendTimeout, int recvTimeout)
@@ -105,7 +107,9 @@ TServerSocket::TServerSocket(int port, int sendTimeout, int recvTimeout)
     tcpRecvBuffer_(0),
     keepAlive_(false),
     intSock1_(THRIFT_INVALID_SOCKET),
-    intSock2_(THRIFT_INVALID_SOCKET) {
+    intSock2_(THRIFT_INVALID_SOCKET),
+    listenCallback_(NULL),
+    acceptCallback_(NULL) {
 }
 
 TServerSocket::TServerSocket(string path)
@@ -122,7 +126,9 @@ TServerSocket::TServerSocket(string path)
     tcpRecvBuffer_(0),
     keepAlive_(false),
     intSock1_(THRIFT_INVALID_SOCKET),
-    intSock2_(THRIFT_INVALID_SOCKET) {
+    intSock2_(THRIFT_INVALID_SOCKET),
+    listenCallback_(NULL),
+    acceptCallback_(NULL) {
 }
 
 TServerSocket::~TServerSocket() {
